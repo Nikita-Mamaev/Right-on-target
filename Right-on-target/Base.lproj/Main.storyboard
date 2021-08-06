@@ -34,6 +34,9 @@
                                 <state key="normal" title="Проверить">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvG-tp-ARF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
