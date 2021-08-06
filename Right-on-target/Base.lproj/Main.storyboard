@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="01.square.fill" catalog="system" maximumValueImage="50.square.fill" translatesAutoresizingMaskIntoConstraints="NO" id="6M6-kk-uL5">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="50" minimumValueImage="01.square.fill" catalog="system" maximumValueImage="50.square.fill" translatesAutoresizingMaskIntoConstraints="NO" id="6M6-kk-uL5">
                                 <rect key="frame" x="62" y="192" width="772" height="31"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
@@ -48,6 +48,10 @@
                             <constraint firstItem="W3c-0Z-cyw" firstAttribute="top" secondItem="VgV-cg-TeB" secondAttribute="bottom" constant="30" id="tcX-R9-ctE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="W3c-0Z-cyw" id="DoT-t0-a8a"/>
+                        <outlet property="slider" destination="6M6-kk-uL5" id="edK-BL-rrD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
