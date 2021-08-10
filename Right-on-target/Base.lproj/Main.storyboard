@@ -38,10 +38,19 @@
                                     <action selector="checkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvG-tp-ARF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py5-h4-2pp">
+                                <rect key="frame" x="779" y="363" width="97" height="30"/>
+                                <state key="normal" title="О программе"/>
+                                <connections>
+                                    <segue destination="ta4-sx-ToV" kind="show" id="AJ5-Ha-Pqk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="py5-h4-2pp" secondAttribute="trailing" constant="20" id="4Cp-ZZ-QIx"/>
+                            <constraint firstItem="py5-h4-2pp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AlJ-r1-OD7"/>
                             <constraint firstItem="6M6-kk-uL5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OhA-l9-yhy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6M6-kk-uL5" secondAttribute="trailing" constant="20" id="Ud3-6Q-aQL"/>
                             <constraint firstItem="VgV-cg-TeB" firstAttribute="top" secondItem="6M6-kk-uL5" secondAttribute="bottom" constant="30" id="WED-EA-mfn"/>
@@ -51,6 +60,7 @@
                             <constraint firstItem="W3c-0Z-cyw" firstAttribute="top" secondItem="VgV-cg-TeB" secondAttribute="bottom" constant="30" id="tcX-R9-ctE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MUX-rh-Ref"/>
                     <connections>
                         <outlet property="label" destination="W3c-0Z-cyw" id="DoT-t0-a8a"/>
                         <outlet property="slider" destination="6M6-kk-uL5" id="edK-BL-rrD"/>
@@ -60,10 +70,42 @@
             </objects>
             <point key="canvasLocation" x="12.723214285714285" y="88.405797101449281"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="OkD-lo-anj">
+            <objects>
+                <viewController id="ta4-sx-ToV" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="STV-ha-SOe">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llZ-da-dvJ">
+                                <rect key="frame" x="425.5" y="192" width="45" height="30"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LiQ-zg-OP4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="31t-88-feB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="llZ-da-dvJ" firstAttribute="centerX" secondItem="STV-ha-SOe" secondAttribute="centerX" id="K6c-s2-lTU"/>
+                            <constraint firstItem="llZ-da-dvJ" firstAttribute="centerY" secondItem="STV-ha-SOe" secondAttribute="centerY" id="n7D-q4-RmW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FMW-gL-inS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyW-zQ-gPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="67"/>
+        </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
