@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var number: Int = 0
     var round: Int = 1
     var points: Int = 0
+    lazy var secondViewController: SecondViewController = getSecondViewController()
     
     override func loadView() {
         super.loadView()
@@ -55,6 +56,21 @@ class ViewController: UIViewController {
         checkNumber()
     }
     
+    @IBAction func aboutProgram(_ sender: UIButton) {
+        showNextScreen()
+    }
+    
+    // приватный метод, загружающий View Controller
+    private func getSecondViewController() -> SecondViewController {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+    return viewController as! SecondViewController
+    }
+    
+    func showNextScreen() {
+        self.present(secondViewController, animated: true, completion: nil)
+    }
+    
     //Логика игры
     func checkNumber() {
         let numSlider = Int(slider.value.rounded())
@@ -78,6 +94,5 @@ class ViewController: UIViewController {
         }
         number = Int.random(in: 1...50)
         label.text = String(self.number)
-        
     }
 }

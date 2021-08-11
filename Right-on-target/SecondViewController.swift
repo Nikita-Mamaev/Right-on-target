@@ -33,4 +33,8 @@ class SecondViewController: UIViewController {
         super.viewDidDisappear(animated)
         print("viewDidDisappear SecondViewController")
     }
+    
+    @IBAction func backScreen(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

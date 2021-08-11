@@ -42,7 +42,7 @@
                                 <rect key="frame" x="779" y="363" width="97" height="30"/>
                                 <state key="normal" title="О программе"/>
                                 <connections>
-                                    <segue destination="ta4-sx-ToV" kind="show" id="AJ5-Ha-Pqk"/>
+                                    <action selector="aboutProgram:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7P-4d-Oi3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,7 +73,7 @@
         <!--Second View Controller-->
         <scene sceneID="OkD-lo-anj">
             <objects>
-                <viewController id="ta4-sx-ToV" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="ta4-sx-ToV" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="STV-ha-SOe">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                                 <rect key="frame" x="425.5" y="192" width="45" height="30"/>
                                 <state key="normal" title="Назад"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="LiQ-zg-OP4"/>
+                                    <action selector="backScreen:" destination="ta4-sx-ToV" eventType="touchUpInside" id="xxv-39-P9j"/>
                                 </connections>
                             </button>
                         </subviews>
