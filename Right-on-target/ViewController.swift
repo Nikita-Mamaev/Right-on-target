@@ -11,11 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
-    
-    var number: Int = 0
-    var round: Int = 1
-    var points: Int = 0
     lazy var secondViewController: SecondViewController = getSecondViewController()
+    let game = Game!
     
     override func loadView() {
         super.loadView()
@@ -47,13 +44,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
-        number = Int.random(in: 1...50)
-        label.text = String(number)
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
-        checkNumber()
+        
     }
     
     @IBAction func aboutProgram(_ sender: UIButton) {
@@ -74,23 +70,18 @@ class ViewController: UIViewController {
     //Логика игры
     func checkNumber() {
         let numSlider = Int(slider.value.rounded())
-        if numSlider > number {
-            points += 50 - numSlider + number
-        } else if numSlider < number {
-            self.points += 50 - number + numSlider
-        } else {
-            points += 50
-        }
-        if self.round == 5 {
+        game?.calculateScore(with: numSlider)
+        
+        if  game?.isGameEnded {
             let alert = UIAlertController(
                 title: "Игра окончена",
-                message: "Вы заработали \(self.points) очков", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: nil))
+                message: "Вы заработали \(game?.score) очков", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: game.resta))
             present(alert, animated: true, completion: nil)
             round = 1
             points = 0
         } else {
-            round += 1
+            game?.startNewRound()
         }
         number = Int.random(in: 1...50)
         label.text = String(self.number)

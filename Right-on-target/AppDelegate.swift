@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
 //  Right-on-target
-//
+//  Катя пупсик
 //  Created by Nikita Mamaev on 04.08.2021.
 //
 
