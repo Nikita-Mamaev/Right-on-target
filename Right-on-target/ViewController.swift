@@ -76,11 +76,19 @@ class ViewController: UIViewController {
             let alert = UIAlertController(
                 title: "Игра окончена",
                 message: "Вы заработали \(game.score) очков", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: nil))
-            present(alert, animated: true, completion: game.restartGame)
+            alert.addAction(UIAlertAction(title: "Начать заново", style: .default){
+                UIAlertAction in
+                self.restartGame()
+            })
+            present(alert, animated: true, completion: nil)
         } else {
             game.startNewRound()
             label.text = String(game.currentSecretValue)
         }
+    }
+    
+    func restartGame(){
+        game.restartGame()
+        label.text = String(game.currentSecretValue)
     }
 }
