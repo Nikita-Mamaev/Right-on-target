@@ -15,6 +15,8 @@
 		843C2F5E26BB2DD400970B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843C2F5C26BB2DD400970B59 /* Main.storyboard */; };
 		843C2F6026BB2DD700970B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843C2F5F26BB2DD700970B59 /* Assets.xcassets */; };
 		843C2F6326BB2DD700970B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843C2F6126BB2DD700970B59 /* LaunchScreen.storyboard */; };
+		84A912CA26CDA31500AC13FD /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A912C926CDA31500AC13FD /* GameRound.swift */; };
+		84A912CC26CDA34800AC13FD /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A912CB26CDA34800AC13FD /* Generator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		843C2F5F26BB2DD700970B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843C2F6226BB2DD700970B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843C2F6426BB2DD700970B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A912C926CDA31500AC13FD /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
+		84A912CB26CDA34800AC13FD /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				840BAF9326C5B15400FAF2DD /* Game.swift */,
+				84A912C926CDA31500AC13FD /* GameRound.swift */,
+				84A912CB26CDA34800AC13FD /* Generator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 				840BAF9426C5B15400FAF2DD /* Game.swift in Sources */,
 				843C2F5B26BB2DD400970B59 /* ViewController.swift in Sources */,
 				843C2F5726BB2DD400970B59 /* AppDelegate.swift in Sources */,
+				84A912CC26CDA34800AC13FD /* Generator.swift in Sources */,
+				84A912CA26CDA31500AC13FD /* GameRound.swift in Sources */,
 				843C2F5926BB2DD400970B59 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
