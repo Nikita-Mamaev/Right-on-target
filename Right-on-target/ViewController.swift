@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     lazy var secondViewController: SecondViewController = getSecondViewController()
     var game: Game!
+
     
     override func loadView() {
         super.loadView()
         print("LoadView")
-        let versionLabel = UILabel(frame: CGRect(x: 20, y: 10, width: 200, height: 20))
+        let versionLabel = UILabel(frame: CGRect(x: 20, y: view.frame.maxY - 20, width: 200, height: 20))
         versionLabel.text = "Версия 1.2"
         self.view.addSubview(versionLabel)
     }
