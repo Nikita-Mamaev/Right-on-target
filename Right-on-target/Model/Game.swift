@@ -24,10 +24,6 @@ protocol GameProtocol {
 
 class Game: GameProtocol {
     var score: Int = 0
-    // Минимальное загаданное значение
-    private var minSecretValue: Int
-    // Максимальное загаданное значение
-    private var maxSecretValue: Int
     var currentSecretValue: Int = 0
     // Количество раундов
     private var lastRound: Int
@@ -38,14 +34,10 @@ class Game: GameProtocol {
             return false
         }
     }
-    init?(startValue: Int, endValue: Int, rounds: Int) {
+    init?(generator: Generator, rounds: Int) {
         // Стартовое значение для выбора случайного числа не может быть больше конечного
-        guard startValue <= endValue else {
-            return nil }
-        minSecretValue = startValue
-        maxSecretValue = endValue
         lastRound = rounds
-        currentSecretValue = self.getNewSecretValue()
+        currentSecretValue = generator.getNewSecretValue()
     }
     func restartGame() {
         currentRound = 0
@@ -53,12 +45,8 @@ class Game: GameProtocol {
         startNewRound()
     }
     func startNewRound() {
-        currentSecretValue = self.getNewSecretValue()
+//        currentSecretValue = self.getNewSecretValue()
         currentRound += 1
-    }
-    // Загадать и вернуть новое случайное значение private
-    func getNewSecretValue() -> Int {
-        (minSecretValue...maxSecretValue).randomElement()!
     }
     // Подсчитывает количество очков
     func calculateScore(with value: Int) {

@@ -45,7 +45,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
-        game = Game(startValue: 1, endValue: 50, rounds: 5)
+        let generator = Generator(startValue: 1, endValue: 50)
+        game = Game(generator: generator!, rounds: 5)
         label.text = String(game.currentSecretValue)
         // Do any additional setup after loading the view.
     }
