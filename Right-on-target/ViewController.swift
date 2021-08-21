@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         print("viewDidLoad")
         let generator = Generator(startValue: 1, endValue: 50)
         game = Game(generator: generator!, rounds: 5)
-        label.text = String(game.currentSecretValue)
+        updateLabel()
         // Do any additional setup after loading the view.
     }
     
@@ -85,12 +85,16 @@ class ViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         } else {
             game.startNewRound()
-            label.text = String(game.currentSecretValue)
+            updateLabel()
         }
     }
     
     func restartGame(){
         game.restartGame()
+        updateLabel()
+    }
+    
+    func updateLabel() {
         label.text = String(game.currentSecretValue)
     }
 }
