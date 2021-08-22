@@ -12,6 +12,10 @@ class SecondViewController: UIViewController {
     override func loadView() {
         super.loadView()
         print("loadView SecondViewController")
+        print("LoadView")
+        let versionLabel = UILabel(frame: CGRect(x: 20, y: view.frame.maxY - 20, width: 200, height: 20))
+        versionLabel.text = "Версия 1.2"
+        self.view.addSubview(versionLabel)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
