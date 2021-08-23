@@ -36,6 +36,14 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zs9-ss-UnQ">
+                                <rect key="frame" x="144" y="277" width="173" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="УГАДАЙ СТРАНУ">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ljZ-rI-s1V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -131,13 +139,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llZ-da-dvJ">
-                                <rect key="frame" x="425.5" y="192" width="45" height="30"/>
-                                <state key="normal" title="Назад"/>
-                                <connections>
-                                    <action selector="backScreen:" destination="ta4-sx-ToV" eventType="touchUpInside" id="xxv-39-P9j"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZh-Fd-GMg">
                                 <rect key="frame" x="64" y="20" width="102" height="30"/>
                                 <state key="normal" title="Главное меню"/>
@@ -146,10 +147,8 @@
                         <viewLayoutGuide key="safeArea" id="31t-88-feB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="llZ-da-dvJ" firstAttribute="centerX" secondItem="STV-ha-SOe" secondAttribute="centerX" id="K6c-s2-lTU"/>
                             <constraint firstItem="FZh-Fd-GMg" firstAttribute="leading" secondItem="31t-88-feB" secondAttribute="leading" constant="20" id="fLx-YV-yc3"/>
                             <constraint firstItem="FZh-Fd-GMg" firstAttribute="top" secondItem="31t-88-feB" secondAttribute="top" constant="20" id="h70-yx-9qH"/>
-                            <constraint firstItem="llZ-da-dvJ" firstAttribute="centerY" secondItem="STV-ha-SOe" secondAttribute="centerY" id="n7D-q4-RmW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FMW-gL-inS"/>
